@@ -279,12 +279,12 @@ func processFile(file string,
 					Name:          name,
 					Command:       fmt.Sprintf("%q %q", ssh, hostname),
 					CustomCommand: "Yes",
-					Triggers: &triggerlist{&trigger{
-						Partial:   true,
-						Parameter: hostname,
-						Regex:     "\\[sudo\\] password for",
-						Action:    "PasswordTrigger",
-					}},
+					// Triggers: &triggerlist{&trigger{
+					// 	Partial:   true,
+					// 	Parameter: hostname,
+					// 	Regex:     "\\[sudo\\] password for",
+					// 	Action:    "PasswordTrigger",
+					// }},
 					Tags:       []string{tag},
 					BoundHosts: boundHosts,
 				})
